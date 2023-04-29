@@ -15,7 +15,7 @@ main{
 section{
   width: 100%;
   max-width: 550px;
-  max-height: 520px;
+  height: fit-content;
   text-align: center;
   background-color: #fff;
   border-radius: 4px;
@@ -29,29 +29,30 @@ section header{
   padding: 0.25rem 0;
 }
 
-section footer{
+footer{
+  width: 100%;
   background-color: black;
   color: #fff;
   padding: 1.5rem 0;
+  transform: translateY(32px);
 }
 
-section article{
-  display: flex;
+section form{
+  padding: 2rem 0;
   align-items: start;
   justify-content: center;
   flex-direction: column;
-  padding: 1.5rem;
   gap:1rem;
 }
 
-section article .labelInput{
+section form .labelInput{
   display: flex;
   justify-content: flex-start;
   align-items: start;
   flex-direction: column;
 }
 
-section article div{
+section form div{
   display: flex;
   justify-content: flex-start;
   align-items: start;

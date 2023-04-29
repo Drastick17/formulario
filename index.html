@@ -1,50 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
-    <title>Formulario</title>
-  </head>
-  <body>
-    <main>
-      <section>
-        <header>
-          <h1>Formulario de Registro</h1>
-        </header>
-        <article>
-          <label class="labelInput">
-            <label for="email">Email:</label>
-            <input type="email" name="email"/>
-          </label>
-          <label class="labelInput">
-            <label for="name">Nombre Completo:</label>
-            <input type="text" name="name"/>
-          </label>
-          <label class="labelInput">
-            <label for="birthday">Fecha de Nacimiento:</label> 
-            <input type="date" name="birthday"/>
-          </label>
-          <label class="labelInput">
-            <label>Sexo:</label>
-            <select>
-              <option value="Mujer">Mujer</option>
-              <option value="Hombre">Hombre</option>
-            </select>
-          </label>
-          <div>
-            <label>Intereses:</label>
-            <label><input type="checkbox"> Computadoras</label>
-            <label><input type="checkbox"> Deportes</label>
-            <label><input type="checkbox"> Juegos</label>
-            <label><input type="checkbox"> Musica</label>
-          </div>
-        </article>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <title>Formulario</title>
+</head>
+
+<body>
+  <main>
+    <section>
+      <header>
+        <h1>Formulario de Registro</h1>
+      </header>
+      <form class="form">
+        <label class="labelInput">
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" />
+          <span id="emailError"></span>
+        </label>
+        <label class="labelInput">
+          <label for="name">Nombre Completo:</label>
+          <input type="text" name="fullName" id="fullName" />
+          <span id="fullNameError"></span>
+        </label>
+        <label class="labelInput">
+          <label for="birthday">Fecha de Nacimiento:</label>
+          <input type="date" name="birthday" id="birthday" />
+          <span id="birthdayError"></span>
+        </label>
+        <label class="labelInput">
+          <label>Sexo:</label>
+          <select name="sex" id="sex">
+            <option value="" selected>None</option>
+            <option value="2">Mujer</option>
+            <option value="1">Hombre</option>
+          </select>
+          <span id="sexError"></span>
+        </label>
+        <div class="containerInterests">
+          <label>Intereses:</label>
+          <label><input name="interests" type="checkbox" value="1"> Computadoras</label>
+          <label><input name="interests" type="checkbox" value="2"> Deportes</label>
+          <label><input name="interests" type="checkbox" value="3"> Juegos</label>
+          <label><input name="interests" type="checkbox" value="4"> Musica</label>
+          <span id="interestsError"></span>
+        </div>
         <footer>
-          <button>Registrarse</button>
+          <button class="button" type="submit">Registrarse</button>
+  
         </footer>
-      </section>
-    </main>
-  </body>
+      </form>
+
+    </section>
+  </main>
+  <script src="./app.js"></script>
+</body>
+
 </html>
